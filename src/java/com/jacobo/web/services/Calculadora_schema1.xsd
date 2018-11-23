@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://services.web.jacobo.com/" xmlns:tns="http://services.web.jacobo.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="calculate" type="tns:calculate"/>
+
+  <xs:element name="calculateResponse" type="tns:calculateResponse"/>
+
+  <xs:complexType name="calculate">
+    <xs:sequence>
+      <xs:element name="a" type="xs:double"/>
+      <xs:element name="operation" type="xs:string" minOccurs="0"/>
+      <xs:element name="b" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="calculateResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
